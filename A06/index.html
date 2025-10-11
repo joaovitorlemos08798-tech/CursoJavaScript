@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Formulário de Validação</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <div class="container">
+        <h1>Cadastro</h1>
+        <div class="input-group">
+            <label for="email">E-mail</label>
+            <input type="email" id="email" oninput="validarEmail()" />
+            <p id="mensagemErroEmail" class="mensagem-status erro"></p>
+        </div>
+        <div class="input-group">
+            <label for="cpf">CPF</label>
+            <input type="text" id="cpf" oninput="validarCPF()" placeholder="XXX.XXX.XXX-XX" />
+            <p id="mensagemErroCPF" class="mensagem-status erro"></p>
+        </div>
+        <div class="input-group">
+            <label for="senha">Senha</label>
+            <input type="password" id="senha" oninput="validarSenha(); validarConfSenha()" />
+            <p id="mensagemErroSenha" class="mensagem-status erro"></p>
+        </div>
+        <div class="input-group">
+            <label for="confSenha">Confirmar Senha</label>
+            <input type="password" id="confSenha" oninput="validarConfSenha()" />
+            <p id="mensagemErroConfSenha" class="mensagem-status erro"></p>
+        </div>
+        <button id="btnEnviar" disabled onclick="concluirCadastro(event)">Concluir Cadastro</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
