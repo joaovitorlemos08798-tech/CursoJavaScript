@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Baixar App</title>
+    <link rel="stylesheet" href="style2.css" />
+</head>
+<body>
+    <div class="container">
+        <h1>Baixe Nosso App</h1>
+        <form id="downloadForm">
+            <label for="username">Nome de Usuário</label>  
+            <input type="text" id="username" name="username" required placeholder="Digite seu nome" />
+
+            <label for="phone">Número de Telefone</label>
+            <input type="tel" id="phone" name="phone" required placeholder="(xx) xxxx-xxxx" pattern="[\d\s\-\(\)]{8,15}" />
+
+            <button type="submit">Enviar e Baixar</button>
+        </form>
+        <div class="message" id="message"></div>
+    </div>
+
+    <script>
+        const form = document.getElementById('downloadForm');
+        const message = document.getElementById('message');
+
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            const username = form.username.value.trim();
+            const phone = form.phone.value.trim();
+
+            if(username && phone){
+                message.style.color = 'green';
+                message.textContent = `Obrigado, ${username}! O link para baixar o app foi enviado para o número ${phone}.`;
+                form.reset();
+            } else {
+                message.style.color = 'red';
+                message.textContent = 'Por favor, preencha todos os campos corretamente.';
+            }
+        });
+        
+    </script>
+
+<script src="script.js"></script>
+</body>
+</html>
