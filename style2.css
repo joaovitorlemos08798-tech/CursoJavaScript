@@ -1,0 +1,65 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #05235a;
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+
+.container {
+    background: rgba(226, 226, 226, 0.966);
+    padding: 2em;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    width: 320px;
+}
+
+h1 {
+    font-size: 1.5em;
+    margin-bottom: 1em;
+    text-align: center;
+    color: #333;
+}
+
+label {
+    display: block;
+    margin-top: 1em;
+    font-weight: bold;
+    color: #555;
+}
+
+input[type="text"], input[type="tel"] {
+    width: 100%;
+    padding: 0.5em;
+    margin-top: 0.3em;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1em;
+    box-sizing: border-box;
+}
+
+button {
+    margin-top: 1.5em;
+    width: 100%;
+    padding: 0.7em;
+    font-size: 1em;
+    background-color: #007bff;
+    border: none;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.message {
+    margin-top: 1em;
+    font-weight: bold;
+    text-align: center;
+    color: green;
+}
